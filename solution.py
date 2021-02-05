@@ -9,7 +9,7 @@ def welcome_assignment_answers(question):
     elif question == "Is it possible to decrypt a message without a key? - Yes/No":
         return default_answer
     elif question == "Is it possible to decode a message without a key? - Yes/No":
-        return default_answer
+        return "Yes"
     elif question == "Is a hashed message supposed to be un-hashed? - Yes/No":
         return default_answer
     elif question == "What is the MD5 hashing value to the following message: 'NYU Computer Networking' - Use MD5 hash generator and use the answer in your code":
@@ -17,9 +17,9 @@ def welcome_assignment_answers(question):
     elif question == "Is MD5 a secured hashing algorithm? - Yes/No":
         return default_answer
     elif question == "What layer from the TCP/IP model the protocol DHCP belongs to? - The answer should be a numeric number":
-        return 3
+        return 5
     elif question == "What layer of the TCP/IP model the protocol TCP belongs to? - The answer should be a numeric number":
-        return 2
+        return 4
 
 # Complete all the questions.
 
