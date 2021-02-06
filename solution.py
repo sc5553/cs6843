@@ -16,6 +16,8 @@ def webServer(port=13331):
         connectionSocket, addr = serverSocket.accept()#Fill in start      #Fill in end
         try:
             message = connectionSocket.recv(1024)#Fill in start    #Fill in end
+            if not message:
+                break
             filename = message.split()[1]
             f = open(filename[1:])
             outputdata = f.read()#Fill in start     #Fill in end
@@ -42,8 +44,6 @@ def webServer(port=13331):
             #Fill in start
             connectionSocket.close()
             #Fill in end
-        except Exception:
-            break
     serverSocket.close()
     sys.exit()  # Terminate the program after sending the corresponding data
 
