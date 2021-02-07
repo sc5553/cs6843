@@ -28,12 +28,12 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send MAIL FROM command and print server response.
     # Fill in start
-    clientSocket.send("MAIL FROM:<>\r\n".encode())
+    clientSocket.send("MAIL FROM:<testing@testing.com>\r\n".encode())
     # Fill in end
 
     # Send RCPT TO command and print server response.
     # Fill in start
-    clientSocket.send("RECPT TO:<>\r\n".encode())
+    clientSocket.send("RECPT TO:<testing.testing.com>\r\n".encode())
     # Fill in end
 
     # Send DATA command and print server response.
@@ -43,7 +43,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send message data.
     # Fill in start
-    clientSocket.send("".encode())
+    clientSocket.send("My message\r\n".encode())
     # Fill in end
 
     # Message ends with a single period.
