@@ -126,10 +126,10 @@ def ping(host, timeout=1):
         delay = doOnePing(dest, timeout)
         result.append(delay)
         time.sleep(1)  # one second
-    packet_min = min(result)
-    packet_avg = sum(result)/len(result)
-    packet_max = max(result)
-    packet_stdev = statistics.pstdev(result)
+    packet_min = min(result) * 1000
+    packet_avg = sum(result)/len(result) * 1000
+    packet_max = max(result) * 1000
+    packet_stdev = statistics.pstdev(result) * 1000
     vars = [round(packet_min, 2), round(packet_avg, 2), round(packet_max, 2),round(packet_stdev, 2)]
     #print(vars)
     return vars
