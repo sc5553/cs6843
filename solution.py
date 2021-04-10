@@ -129,7 +129,7 @@ def ping(host, timeout=1):
     packet_min = min(result)
     packet_avg = sum(result)/len(result)
     packet_max = max(result)
-    packet_stdev = statistics.stdev(result)
+    packet_stdev = statistics.pstdev(result)
     vars = [round(packet_min, 2), round(packet_avg, 2), round(packet_max, 2),round(packet_stdev, 2)]
     #print(vars)
     return vars
