@@ -115,7 +115,7 @@ def ping(host, timeout=1):
         dest = gethostbyname(host)
     except:
         # return default answer if hostname not valid
-        return ['0', '0.0', '0', '0.0']
+        return [0, 0.0, 0, 0.0]
     #print("Pinging " + dest + " using Python:")
     #print("")
     # Calculate vars values and return them
@@ -130,7 +130,7 @@ def ping(host, timeout=1):
     packet_avg = sum(result)/len(result)
     packet_max = max(result)
     packet_stdev = statistics.stdev(result)
-    vars = [str(round(packet_min, 2)), str(round(packet_avg, 2)), str(round(packet_max, 2)),str(round(packet_stdev, 2))]
+    vars = [round(packet_min, 2), round(packet_avg, 2), round(packet_max, 2),round(packet_stdev, 2)]
     #print(vars)
     return vars
 
