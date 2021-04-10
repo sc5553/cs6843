@@ -135,4 +135,4 @@ def ping(host, timeout=1):
     return vars
 
 if __name__ == '__main__':
-    ping("google.com")
+    ping("google.co.il")
